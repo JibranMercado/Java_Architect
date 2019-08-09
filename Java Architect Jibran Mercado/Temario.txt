@@ -1,0 +1,47 @@
+1. Maven
+Introduccion
+Instalacion
+Ciclo de vida
+Grupos y artefactos
+Arquetipos
+Ejercicios
+Scrum
+
+2. GIT
+Introduccion
+Repositorios online
+Comandos útiles
+Ejemplos git
+SVN
+Introduccion
+svn vs git
+Ejercicios
+
+3. Arquitecturas reales arquitectura old fashion
+Evolución de la arquitectura
+Ejercicios
+
+4. JUnit
+Introduccion
+Ejemplos de desarrollo de junit
+TDD
+Maven + Junit
+Ejercicios
+Jenkins + Junit
+Integracion continua
+Ejercicios
+
+5. Patrones de diseño JEE
+Introduccion
+Explicacion de patrones
+Patrones de integracion y MQ
+Introducción
+Explicacion
+Antipatrones
+Herramientas de control de proyectos
+
+6. Arquitectura completa
+Ejemplo de arquitectura
+ESB
+SOA
+Microservicios

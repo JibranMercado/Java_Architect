@@ -1,0 +1,179 @@
+JAVA ARCHITECT
+
+INSTRUCTOR: ISRAEL COURTOIS
+
+>MAVEN(Gestionar Librerias)
+	- Maven, nos ayuda administrar los proyectos, para windows y linux ($HOME/.m2/repository)
+	- Licencias restrictivas, maven no las utiliza.
+
+>MAVEN(Gestionar Proyectos)
+	- Descargar Codigo SCM
+	- Compilar
+	-Probar
+	-Documentar
+	-Reporting
+	-Desplegar
+
+>Maven (Estructura homogenea de proyectos)
+	-Proyectos distintos, estructuras distintas
+	-Directorios distintos
+	-Nomeclaturas
+	-SSOO Distintoas
+
+----> INSTALAR JDK 12
+----> INSTALAR ECLIPSE 2019-06
+----> INGRESAR LA CARPETA A LA RUTA: C:\apache-maven-3.6.1
+----> INSTALAR jenkins-2.176.2
+
+>Configurar variables de entorno
+	-Agregar JAVA_HOME (Variables de entorno)
+		- C:\Program Files\Java\jdk-12.0.2
+	-Agregar MAVEN_HOME (Variables del sistema)
+		VARIABLES DE ENTORNO MAVEN_HOME (Windows - 10)
+		VARIABLES DEL SISTEMA MAVEN_HOME (Windows 10)
+			-C:\apache-maven-3.6.1
+	-Agregar PATH (variable de entorno)
+		-%JAVA_HOME%\bin
+	-Editar Path (Variables del sistema) 
+		-New (%MAVEN_HOME%\bin)
+
+> Documentos (Crear carpeta con el nombre de "proyectos")
+	-C:\Users\cursostorrepremier\Documents\Proyectos
+
+> Validar versión de java y maven (Solo debe mostrar información)
+	-CMD (cd C:\Users\cursostorrepremier\Documents\Proyectos)
+	-CMD (java -version)
+	-CMD (javac)
+	-CMD (mvn)
+	-CMD (mvn -ver)
+
+>Arquetipos (Archetypes)
+	-cmd (mvn archetype:generate)
+
+>Crear proyecto maven
+	-Internet obtener (https://maven.apache.org/archetypes/maven-archetype-quickstart/)
+	-CMD (mvn archetype:generate -DarchetypeGroupId=org.apache.maven.archetypes -DarchetypeArtifactId=maven-archetype-quickstart)
+	-CMD (Define value for property 'groupId': mx.coppel.maven)
+	-CMD (Define value for property 'artifactId': cursomaven1)
+	-CMD (Define value for property 'version' 1.0-SNAPSHOT: :) ENTER
+	-CMD (Define value for property 'package' mx.coppel.maven: : mx.coppel.java)
+	-CMD ( Y: : y)
+
+>Instalar proyecto MAVEN
+	-CMD (C:\Users\cursostorrepremier\Documents\Proyectos>cd cursomaven1)
+	-CMD (mvn install)
+
+>Configurar Eclipse
+	-Workpeach (C:\Users\cursostorrepremier\Documents\Proyectos)
+	-Agregar Jar (C:\Program Files\Java\jdk-12.0.2)
+	-Preference>Maven (Activas check: Download repository index updates on startup)
+	-Agregar pestañas de [Console] y [Pregress]
+	-Reiniciar Eclipse
+
+>Importar proyecto Maven
+	-Import Proyecto>Existeng Maven Proyect>Brows(C:\Users\cursostorrepremier\Documents\Proyectos\cursomaven1)
+
+>Ciclos de vida Maven
+	-Clean (Controla la limpieza del proyecto)
+	-Default (Controla el despliegue del proyecto)
+	-site (Controla la creación del site de documentación del proyecto)
+	
+	Nota: Cada uno de los ciclos esta definido por una lista de fases (phases), donde cada fase representa un estado en el 
+	ciclo de vida.
+
+>Limpiar Maven
+	-Clic desrecho sobre el nombre del proyecto en eclipse > Maven Clean
+	-Acción (Borra contenido de la carpeta tarjet)
+
+>Cambiar pakinng en el archivo pom.xml
+	-Cambiar de jar a War (eclipse overview)
+	-Goals = package (eclipse)
+	-Run As Maven Build  (eclipse)
+
+>Agregar dependencias al POM.XML
+	
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		PdfWriter write;
+		try {
+			write = new PdfWriter("C:\\Users\\cursostorrepremier\\Desktop\\Jibran Java Architect\\PDF_PRUEBA.pdf");
+			PdfDocument pdfDoc = new PdfDocument(write);
+			Document doc = new Document(pdfDoc);
+			doc.add(new Paragraph("Curso Maven Coppel..."));
+			doc.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+GIT
+
+>Instalar GIT (Descargar Internet)
+	-Usar como editor Notepad
+	-Los demas pasos solo se debe dar NEXT
+
+>Crear carpeta en GIT
+	-$mkdir jibran (C:\Users\cursostorrepremier)
+
+>Acceder a la carpeta 
+	-$cd jibran
+
+>Iniciar repositorio dentro de mi carpeta
+	-$git init (Initialized empty Git repository in C:/Users/cursostorrepremier/jibran/.git/)
+
+>Estado del repositorio GIT  (poner cualquier archivo en la carpeta jibran a nivel de .git)
+	-$git status 
+
+>Agregar archivos al repositorio
+	-$git add Notas.txt
+
+	>Revisar de nuevo el estatus
+		-$git status (aparece en color verde)
+
+>Ver cambios en el repositorio
+	-$ git diff (Ayuda a revisar si hay cambios en el archivo que esta en el repositorio)
+
+>Ver historial de archivos subidos
+	-$git show (Muestra los cambios, descripciones de cada commit)
+
+>Mirar todos los cambios relacionados al repositorio
+	-$git log
+
+>Sincronizar git con el repositorio GitHub
+	-git remote add origin https://github.com/capacitacion-ic/cursocoppel.git
+
+>Entradas y salidas para el repositorio
+	-git remote -v
+
+>Omitir el OPENSSL
+	-$ unset SSH_ASKPASS
+
+>Subir documentos al repositorio GitHub
+	-$git push origin master
+	-Captura user GitHub 
+	-Captura pass GitHub
+
+>Borrar archivo de GIT
+	-$git rm prueba.txt
+
+>Clonar el repositorio GitHub a tu maquina local
+	-$ git clone https://github.com/capacitacion-ic/cursocoppel.git
+
+>Hacer el enlace con el repositorio GitHub
+	-$ git remote add upstream https://github.com/capacitacion-ic/cursocoppel.git
+
+>Configurar nombre del usuario 
+	-$ git config --global user.name "Jibran"
+
+>Configurar correo del usuario
+	-$ git config --global user.mail "jmmercado@coppel.com"
+
+>Actualizar y bajar todo lo de la carpeta actualizada del repositorio
+	-git pull -r upstream master
+
+>Commit
+	-git commit -m "Subir evaluacion Curso Jibran"

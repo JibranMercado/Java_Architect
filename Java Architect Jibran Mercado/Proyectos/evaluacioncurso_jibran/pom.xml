@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>evaluacioncurso_jibran</groupId>
+  <artifactId>evaluacioncurso_jibran</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>12</release>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+      	<groupId>org.apache.maven.plugins</groupId>
+      	<artifactId>maven-assembly-plugin</artifactId>
+      	<version>3.1.1</version>
+      	<configuration>
+         <descriptorRefs>
+           <descriptorRef>jar-with-dependencies</descriptorRef>
+         </descriptorRefs>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+  <dependencies>
+  	<dependency>
+  		<groupId>net.sf.m-m-m</groupId>
+  		<artifactId>mmm-util-scanner</artifactId>
+  		<version>8.7.0</version>
+  	</dependency>
+  </dependencies>
+</project>
